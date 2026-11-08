@@ -102,6 +102,14 @@
       body { padding: 40px 64px 36px 12vw; }
       main { padding-top: 22vh; }
     }
+    @media (max-width: 759px) {
+      /* On phones the page was only ~40px taller than the screen once the
+         browser toolbars collapsed, so scrolling hit the bottom, bounced,
+         and the toolbars flickered in and out. Keep it comfortably taller
+         than the largest (toolbars-hidden) viewport; lvh doesn't change
+         while scrolling. */
+      body { min-height: calc(100lvh + 160px); }
+    }
     @media (max-width: 420px) {
       body { padding: 22px 20px 20px; }
       main { font-size: 22px; padding-top: 72px; padding-bottom: 56px; }
